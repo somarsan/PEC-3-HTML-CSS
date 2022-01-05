@@ -1,0 +1,531 @@
+/* REGLAS GENERALES */
+
+/* Variables de colores:  */
+:root {
+    --texto-color: rgb(0,0,0);
+    --texto-color-secundario: rgb(255, 255, 255);
+    --contraste-color: rgb(189, 55, 0);
+    --fondo-color: rgb(244, 244, 244);
+    --fondo-formulario-color: rgb(242, 232, 228);
+  }
+
+
+/* Reset de margins y paddings */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+/* Bloques principales: */
+
+html{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+body{
+  color: var(--texto-color);
+}
+
+body p {
+  line-height: 1.5;
+  padding-bottom: 10px;
+}
+
+main{
+  background-color: var(--fondo-color);
+}
+
+.sintomas, .videos, .cop26{
+  padding: 30px 0 50px 0;
+}
+
+header{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(13, 10, 44, 0.04); 
+  padding: 5px 0 5px 0;
+  text-transform: uppercase;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+header a:link, a:visited, a:active, a:hover {
+  text-decoration:none;
+}
+
+header a:hover{
+  color: rgba(0,0,0,0.5);
+}
+
+header a:visited{
+  color: var(--texto-color);
+}
+
+header .lema {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+header .titular {
+  font-size: calc(3rem + 1vw);
+  font-weight: 800;
+  line-height: 1;
+}
+
+header nav {
+  margin-top: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.5;
+  padding: 15px 0 10px 0;
+}
+
+header nav .menu {
+  list-style: none;
+  margin-left: 0;
+}
+
+header nav li.pagina a{
+  color: var(--contraste-color);
+}
+
+h1{
+  text-align: center;
+  font-size: calc(1rem + 1vw);
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: calc(1rem + 0.5vw);
+  padding-bottom: 10px;
+}
+
+a{
+  color: var(--contraste-color);
+  text-decoration:none;
+}
+
+a:hover{
+  color: var(--texto-color);
+  text-decoration:underline;
+}
+
+article a.enlaces{
+  font-weight: 600;
+  color: var(--contraste-color);
+  border-bottom: 1px dotted var(--contraste-color);
+}
+
+article a.enlaces:hover{
+  font-weight: 600;
+  color: var(--texto-color);
+  border-color: var(--texto-color);
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--texto-color);
+}
+
+footer ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 20px 0 10px 0;
+    line-height: 1.5;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: var(--texto-color-secundario);
+}
+
+footer ul li a:hover {
+  text-decoration: none;
+  color: var(--contraste-color);
+}
+
+footer .redes {
+  display: flex;
+}
+
+footer .redes li {
+  margin-right: 5px;
+}
+
+footer .redes li a:hover {
+  opacity: 0.7;
+}
+
+footer p {
+  color: var(--texto-color-secundario);
+  padding: 10px 0 30px 0;
+  margin: 0 auto;
+}
+
+/* Media queries: */
+
+@media (min-width: 300px) {
+  .contenedor{
+    width: 95%;
+    margin: auto;
+  }
+
+  header .contenedor {
+    text-align: center;
+  }
+
+  header nav .menu{
+    padding-left: 0;
+  }
+
+  #principal {
+    height: 250px;
+  }
+
+  .sintomas h2 {
+    padding-top: 10px;
+  }
+
+  footer ul {
+    text-align: center;
+    margin: auto;
+  }
+
+  footer p {
+    text-align: center;
+    width: 70%;
+  }
+
+  footer .redes{
+    width: 25%;
+    justify-content: space-around;
+  }
+}
+
+
+@media (min-width: 700px) {
+  .contenedor{
+    width: 70%;
+    margin: auto;
+  }
+
+  header .contenedor {
+    text-align: left;
+  }
+
+  header nav .menu{
+    display: flex;
+    padding-left: 0;
+  }
+
+  header nav .menu li{
+  margin-right: 25px;
+  }
+
+  #principal {
+    height: 350px;
+  }
+
+  #noticias {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+  }
+
+  #noticias article {
+    flex: 150px;
+    margin-right: 30px;
+  }
+
+  #noticias article:last-child {
+    margin-right: 0;
+  }
+
+  .formulario .contenedor {
+    width: 40%;
+  }
+
+  .sintomas .contenedor article{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 0 20px 0;
+    text-align: justify;
+    background-color: var(--fondo-color);
+  }
+
+  .sintomas h2 {
+    padding-top: 0;
+  }
+
+  .sintomas .contenedor article:nth-child(odd) figure {
+    grid-column: 1;
+    height: 100%;
+    background-color: var(--texto-color-secundario);
+    padding: 20px;
+    border-radius: 10px 0 0 10px;;
+  }
+
+  .sintomas .contenedor article:nth-child(odd) div {
+    grid-column: 2;
+    background-color: var(--texto-color-secundario);
+    padding: 20px 20px 20px 0;
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .sintomas .contenedor article:nth-child(even) figure {
+    grid-column: 2 ;
+    height: 100%;
+    background-color: var(--texto-color-secundario);
+    padding: 20px;
+    border-radius: 10px 0 0 10px;;
+  }
+
+  .sintomas .contenedor article:nth-child(even) div {
+    grid-column: 3;
+    background-color: var(--texto-color-secundario);
+    padding: 20px 20px 20px 0;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .sintomas .contenedor article figure img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .videos .contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    column-gap: 20px;
+    grid-row-gap: 20px;
+    row-gap: 20px;
+    padding: 20px 0 30px 0;
+  }
+
+  .cop26 .contenedor {
+    display: flex;
+  }
+
+  .cop26 .contenedor section:first-child {
+    margin-right: 100px;
+  }
+
+  .cop26 .contenedor section:last-child {
+    text-align: justify;
+  }
+
+  footer ul {
+    text-align: left;
+    display: flex;
+    width: 100%;
+  }
+
+  footer ul li{
+    margin-right: 25px;
+  }
+
+  footer p {
+    text-align: left;
+    width: 100%;
+  }
+
+  footer .redes{
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Página index */
+
+#principal {
+  background: url(../img/bg-hero-home.jpg) no-repeat;
+  background-position: top left;
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#principal .contenedor h1 {
+  color: var(--texto-color-secundario);
+  font-size: calc(1.5rem + 3vw);
+  font-weight: 400;
+  text-align: left;
+  padding: 0;
+}
+
+.objetivos{
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.index article {
+  padding-bottom: 10px;
+}
+
+.index article:last-child {
+  padding-bottom: 60px;
+}
+
+.index article figure {
+  width: 100%;
+  margin: auto;
+}
+
+.index article figure img{
+  max-width: 100%;
+}
+
+.index article figure figcaption{
+  padding: 10px 0 10px 0;
+}
+
+.index article a{
+  color: var(--contraste-color);
+  text-decoration:none;
+}
+
+.index article a:hover{
+  color: var(--texto-color);
+  text-decoration:none;
+}
+
+.index .formulario{
+  background-color: var(--fondo-formulario-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.formulario .info_suscripcion {
+  font-size: 0.8rem;
+}
+
+.formulario .info_suscripcion a {
+  color: var(--contraste-color);
+  text-decoration:none;
+}
+
+.formulario .info_suscripcion a:hover {
+  color: var(--texto-color);
+  text-decoration:underline;
+}
+
+.formulario form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.formulario .campo input {
+  width: 96%;
+  margin: 0 auto;
+  padding: 10px 0px 10px 10px;
+  margin-bottom: 10px;
+}
+
+.formulario button {
+  background-color: var(--contraste-color);
+  color: var(--texto-color-secundario);
+  padding: 10px 20px 10px 20px;
+  border-style: solid;
+  border-color:var(--contraste-color);
+  text-transform: uppercase;
+}
+
+.formulario button:hover{
+  background-color: var(--texto-color);
+  border-color:var(--texto-color);
+  color: var(--texto-color-secundario);
+}
+
+
+/* Página síntomas */
+
+.sintomas article {
+  background-color: var(--texto-color-secundario);
+  padding: 30px 15px 10px 15px;
+  border-radius: 10px;
+  margin: 15px 0 15px 0;
+}
+
+.sintomas article p:nth-child(3){
+  padding-bottom: 0;
+}
+
+.sintomas article figure {
+  width: 100%;
+  margin: auto;
+}
+
+.sintomas article figure img{
+  max-width: 100%;
+}
+
+
+/* Página videos */
+
+.videos figure {
+  padding-bottom: 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.videos iframe {
+  display:block;
+  margin: auto;
+  border: 0;
+  max-width: 100%;
+}
+
+.videos figcaption {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0 15px 0;
+  margin-bottom: 5px;
+  background-color: var(--texto-color-secundario);
+}
+
+/* Página COP26 */
+
+.cop26 section {
+  padding-top: 20px;
+}
+
+.cop26 figure img {
+  max-width: 100%;
+}
+
+dl {
+  line-height: 1.5;
+}
+
+dt {
+  font-variant: small-caps;
+  font-weight: 600;
+}
+
+dd {
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.cop26 section ol {
+  padding: 0 0 10px 30px;
+}
+
+blockquote {
+  background-color: var(--texto-color-secundario);
+  padding: 20px 15px 20px 15px;
+  margin: 10px 0 20px 0;
+  border-left: 4px solid #ff1616;
+}
+
+blockquote p{
+  text-align: left;
+}
