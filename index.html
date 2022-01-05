@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>1,5 ºC </title>
+    
+    <meta name="author" content="Sonia Martí">
+    <meta name="description" content="Esta página es un proyecto para la asignatura &quot;HTML y CSS&quot; de la UOC.">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <header>
+        <div class="contenedor">
+            <p class="lema">No hay planeta B</p>
+            <p class="titular"><a href="index.html">1,5 ºC</a></p>
+            <nav>
+            <ul class="menu">
+                <li> <a href="sintomas.html">Síntomas del cambio climático</a></li>
+                <li> <a href="videos.html">Vídeos</a></li>
+                <li> <a href="cop26.html">COP26</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="index">
+        
+        <section id="principal">
+            <div class="contenedor">
+                <h1>La crisis climática, ¿una carrera que podemos ganar?</h1>
+            </div>
+        </section>
+      
+
+        <section class="objetivos">
+            <div class="contenedor">
+                <h1>¿Qué es Un grado y medio?</h1>
+                <p>El acuerdo de París de 2015 sobre el cambio climático exige que el calentamiento global se mantenga por debajo de 1,5 grados centígrados. ¿Se está haciendo todo lo que se puede al respecto?</p>
+                <p>En Un grado y medio estamos preocupados por el cambio climático y desde aquí os queremos mantener informados y atentos a las iniciativas de acción climática.</p>
+            </div>
+        </section>
+
+        <section class="contenedor">
+            <h1>Noticias</h1>
+            
+            <div id="noticias">
+                <article>
+                    <figure>
+                        <img src="img/n-greta-thunberg.jpg" alt="Imagen de Greta Thunberg">
+                        <figcaption>14.11.2021</figcaption>
+                    </figure>
+                    <h2><a href="">Greta Thunberg lamenta el acuerdo de la COP26</a></h2>
+                    <p>&laquo;Bla, bla, bla&raquo;. Esta es la descripción que Greta Thunberg ha hecho del acuerdo que ha puesto fin a la COP26 de Glasgow …</p>
+                    <p><a class="enlaces" href="">Leer más</a></p>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="img/n-delhi.jpg" alt="Imagen de la contaminación del aire en Nueva Delhi">
+                        <figcaption>13.11.2021</figcaption>
+                    </figure>
+                    <h2><a href="">El estado indio de Delhi cierra escuelas por la contaminación del aire</a></h2>
+                    <p>El Gobierno ha ordenado el cierre de escuelas, ha paralizado la construcción y ha decretado que los funcionarios trabajen obligatoriamente desde casa, debido a la contaminación del aire …</p>
+                    <p><a class="enlaces" href="">Leer más</a></p>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="img/n-estres.jpg" alt="Persona con problema de salud mental">
+                        <figcaption>07.10.2021</figcaption>
+                    </figure>
+                    <h2><a href="">La ansiedad climática: un problema de salud mental </a></h2>
+                    <p>Diversos estudios aseguran que el escenario apocalíptico que augura el cambio climático causa estrés, sobre todo en niños y adolescentes …</p>
+                    <p><a class="enlaces" href="">Leer más</a></p>
+                </article>
+            </div>
+        </section>
+
+        <section class="formulario">
+        <div class="contenedor">
+            <h1>Suscríbete a nuestro boletín de noticias</h1>
+            <form action="/mi-formulario" method="post">
+                <div class="campo">
+                    <input type="text" id="username" name="user_name" placeholder="Nombre" aria-label="Introducir nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                </div>
+                <div class="campo">
+                    <input type="email" id="email" name="user_email" placeholder="Correo electrónico" aria-label="Introducir el correo electrónico">
+                </div>
+                <div class="info_suscripcion">
+                    <p>INFORMACIÓN SOBRE PROTECCIÓN DE DATOS DE <strong>Un grado y medio. Finalidades: </strong>recogida de datos para el envío de información. <strong>Legitimación: </strong>Consentimiento del interesado. <strong>Destinatarios: </strong> No están previstas cesiones de datos a terceros, excepto obligación legal. <strong>Derechos: </strong>Puede retirar su consentimiento en cualquier momento, así como acceder, rectificar, suprimir sus datos y otros derechos dirigiéndose a <a href="">info@ungradoymedio.info</a>. <strong>Información Adicional: </strong>Puede ampliar la información en el enlace de <a href="">Aviso legal </a> y <a href="">Política de privacidad.</a></p>
+                    <p>
+                        <input type="checkbox" id="condiciones" name="user_condiciones" value="acepto" required>
+                        <label for="condiciones">He leído y acepto la política de privacidad</label>
+                    </p>
+                </div>
+                <p> <button type="submit">Suscríbeme</button> </p>
+            </form>
+        </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <ul>
+                <li> <a href="">Sobre nosotros</a></li>
+                <li> <a href="">Aviso legal</a></li>
+                <li> <a href="">Política de privacidad</a></li>
+                <li> <a href="">Política de cookies</a></li>
+            </ul>
+            <ul class="redes">
+                <li> <a href=""><img src="img/twitter.svg" alt="Logo Twitter"></a></li>
+                <li> <a href=""><img src="img/instagram.svg" alt="Logo Instagram"></a></li>
+                <li> <a href=""><img src="img/youtube.svg" alt="Logo Youtube"></a></li>
+            </ul>
+            <p>Actividad realizada por Sonia Martí Sánchez, para la asignatura HTML y CSS. Primer semestre del curso 2021-2022</p>
+        </div>
+    </footer>
+
+  </body>
+</html>
