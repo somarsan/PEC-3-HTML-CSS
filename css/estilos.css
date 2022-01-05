@@ -57,6 +57,10 @@ header a:link, a:visited, a:active, a:hover {
   text-decoration:none;
 }
 
+header a{
+  color: var(--texto-color);
+}
+
 header a:hover{
   color: rgba(0,0,0,0.5);
 }
